@@ -136,7 +136,7 @@ header {
     opacity: 0;
 }
 
-.nav-hamburger {
+.nav-hamburger, .custom-logo-link {
     -webkit-transition: 0.5s -webkit-filter linear;
     -moz-transition: 0.5s -moz-filter linear;
     -moz-transition: 0.5s filter linear;
@@ -146,7 +146,8 @@ header {
     filter: brightness(1);
 }
 
-.nav-hamburger.dark {
+.nav-hamburger.dark,
+.custom-logo-link.dark {
     filter: brightness(0);
 }
 
@@ -169,7 +170,7 @@ header {
 }
 
 .card-zoom-text {
-    @apply font-theme-heading absolute text-3xl 2xl:text-4xl font-light transition-all duration-500 ease-in-out transform scale-150 text-white;
+    @apply font-theme-heading text-3xl 2xl:text-5xl font-light text-black text-center;
 }
 
 .card-zoom:hover .card-zoom-image {

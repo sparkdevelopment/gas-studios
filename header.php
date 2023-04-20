@@ -24,7 +24,7 @@
 					<div class="flex justify-between items-center">
 						<div class="ml-1 xl:ml-4">
 							<?php if (has_custom_logo()) { ?>
-								<div class="sm:w-auto max-w-[75%] xl:max-w-[80%]">
+								<div class="sm:w-auto max-w-[75%] lg:max-w-[35%] xl:max-w-[20%]">
 									<?php the_custom_logo(); ?>
 								</div>
 							<?php } else { ?>
@@ -49,7 +49,7 @@
 									</g>
 								</svg>
 
-								<svg class="w-10 h-10 hidden nav-cross z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<svg class="w-10 h-10 hidden nav-cross z-10 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 									<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
 										<g id="icon-x">
 											<path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
@@ -64,7 +64,7 @@
 					wp_nav_menu(
 						array(
 							'container_id'    => 'primary-menu',
-							'container_class' => 'absolute w-full md:w-1/2 bg-black text-white h-screen text-[3.25rem] leading-none right-0 top-0 px-8 sm:px-12 md:px-20 lg:px-40 xl:px-52 pt-44 font-light menu-slide',
+							'container_class' => 'absolute w-full md:w-1/2 bg-white text-black	 h-screen text-[3.25rem] leading-none right-0 top-0 px-8 sm:px-12 md:px-20 lg:px-40 xl:px-52 pt-44 font-light menu-slide',
 							'menu_class'      => 'flex-col lg:flex lg:-mx-4',
 							'theme_location'  => 'primary',
 							'li_class'        => 'lg:mx-4 lg:my-2',

@@ -17,6 +17,7 @@ function isElementVisible(element) {
 const main_navigation = document.querySelector('#primary-menu');
 const nav_cross = document.querySelector('.nav-cross');
 const nav_hamburger = document.querySelector('.nav-hamburger');
+const custom_logo_link = document.querySelector('.custom-logo-link');
 document.querySelector('#primary-menu-toggle').addEventListener('click', function (e) {
     e.preventDefault();
     main_navigation.classList.toggle('visible');
@@ -43,10 +44,12 @@ docSlider.init({
 
         // Change hamburger color
         const backgroundColor = getComputedStyle(document.querySelector('.docSlider-current')).backgroundColor;
-        if (backgroundColor === 'rgb(255, 255, 255)') {
+        if (backgroundColor === 'rgb(255, 255, 255)' && index > 0 ) {
             nav_hamburger.classList.add('dark');
+            custom_logo_link.classList.add('dark');
         } else {
             nav_hamburger.classList.remove('dark');
+            custom_logo_link.classList.remove('dark');
         }
     }
 });
@@ -86,3 +89,24 @@ $(owl).owlCarousel({
         }
     }
 });
+
+// If the footer logo comes into view, fade out the header logo
+// If the footer logo leaves the view, fade in the header logo
+var footerLogo = document.querySelector('.js-footer-logo');
+var header = document.querySelector('header');
+var options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+};
+var observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            header.classList.add('header--scrolled');
+        } else {
+            header.classList.remove('header--scrolled');
+        }
+    });
+}
+, options);
+observer.observe(footerLogo);

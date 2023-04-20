@@ -24,6 +24,9 @@ module.exports = {
                 'lighting': "url('/wp-content/themes/gas-theme/resources/img/lighting.jpg')",
                 'camera_digital': "url('/wp-content/themes/gas-theme/resources/img/camera_digital.jpg')",
                 'production': "url('/wp-content/themes/gas-theme/resources/img/production.jpg')"
+                // 'studio_a': "url('/wp-content/themes/gas-theme/resources/img/production.jpg')"
+                // 'studio_b': "url('/wp-content/themes/gas-theme/resources/img/production.jpg')"
+                // 'studio_c': "url('/wp-content/themes/gas-theme/resources/img/production.jpg')"
             }
         },
         screens: {
