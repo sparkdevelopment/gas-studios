@@ -25,34 +25,38 @@ document.querySelector('#primary-menu-toggle').addEventListener('click', functio
     nav_hamburger.classList.toggle('hidden');
 });
 
-// Initialize DocSlider
-docSlider.init({
-    pager: false,
-    afterChange: function (index) {
-        fade_in_elements.forEach(function (element) {
-            if (isElementVisible(element)) {
-                element.classList.add('fade-in--visible');
-            } else {
-                element.classList.remove('fade-in--visible');
-            }
-        });
-        if (index == 6) {
-            document.querySelector('header').classList.add('header--scrolled');
-        } else {
-            document.querySelector('header').classList.remove('header--scrolled');
-        }
+// Initialize DocSlider is docSlider exists
+const docSliderContainer = document.querySelector('.docSlider');
 
-        // Change hamburger color
-        const backgroundColor = getComputedStyle(document.querySelector('.docSlider-current')).backgroundColor;
-        if (backgroundColor === 'rgb(255, 255, 255)' && index > 0 ) {
-            nav_hamburger.classList.add('dark');
-            custom_logo_link.classList.add('dark');
-        } else {
-            nav_hamburger.classList.remove('dark');
-            custom_logo_link.classList.remove('dark');
+if (docSliderContainer) {
+    docSlider.init({
+        pager: false,
+        afterChange: function (index) {
+            fade_in_elements.forEach(function (element) {
+                if (isElementVisible(element)) {
+                    element.classList.add('fade-in--visible');
+                } else {
+                    element.classList.remove('fade-in--visible');
+                }
+            });
+            if (index == 6) {
+                document.querySelector('header').classList.add('header--scrolled');
+            } else {
+                document.querySelector('header').classList.remove('header--scrolled');
+            }
+
+            // Change hamburger color
+            const backgroundColor = getComputedStyle(document.querySelector('.docSlider-current')).backgroundColor;
+            if (backgroundColor === 'rgb(255, 255, 255)' && index > 0) {
+                nav_hamburger.classList.add('dark');
+                custom_logo_link.classList.add('dark');
+            } else {
+                nav_hamburger.classList.remove('dark');
+                custom_logo_link.classList.remove('dark');
+            }
         }
-    }
-});
+    });
+}
 
 // Initialize OwlCarousel
 // import owlCarousel from 'owl.carousel';
@@ -108,5 +112,5 @@ var observer = new IntersectionObserver(function (entries, observer) {
         }
     });
 }
-, options);
+    , options);
 observer.observe(footerLogo);

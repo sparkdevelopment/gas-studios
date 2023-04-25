@@ -716,6 +716,11 @@ video {
   margin-bottom: 5vh;
 }
 
+.my-28 {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -774,6 +779,14 @@ video {
 
 .mb-\[1vh\] {
   margin-bottom: 1vh;
+}
+
+.mt-48 {
+  margin-top: 12rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
 }
 
 .-mb-\[10vh\] {
@@ -956,6 +969,10 @@ video {
   max-width: none;
 }
 
+.max-w-4xl {
+  max-width: 56rem;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -1049,6 +1066,12 @@ video {
   gap: 1rem;
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .self-center {
   align-self: center;
 }
@@ -1078,10 +1101,6 @@ video {
 }
 
 .border-\[1px\] {
-  border-width: 1px;
-}
-
-.border {
   border-width: 1px;
 }
 
@@ -1395,10 +1414,6 @@ video {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.outline {
-  outline-style: solid;
 }
 
 .brightness-0 {
@@ -1753,108 +1768,6 @@ header {
     -webkit-mask-size: auto;
             mask-size: auto;
   }
-}
-
-/**-----------------------
-
- docSlider.js - ver.3.0.1
- URL : https://prjct-samwest.github.io/docSlider/
- created by SamWest
- Copyright (c) 2020 SamWest.
- This plugin is released under the MIT License.
-
- -----------------------**/
-
-/* CHANGE THE PAGER STYLE */
-
-.docSlider-pager {
-  position: fixed;
-  z-index: 100;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-}
-
-/* CHANGE THE BUTTON STYLE */
-
-.docSlider-button {
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
-  margin: 5px 0;
-  background-color: #333;
-  opacity: .25;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: none;
-  box-sizing: border-box;
-}
-
-.docSlider-button.selected {
-  opacity: 1;
-}
-
-.docSlider-button:active {
-  outline: none;
-}
-
-/**------------------------------
-  REWRITING IS NOT RECOMMENDED
- -----------------------------**/
-
-html, body {
-  overflow: hidden;
-  touch-action: none;
-  height: 100%;
-}
-
-html, body,
-.docSlider,
-.docSlider-inner,
-.docSlider-page {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: none;
-  outline: none;
-}
-
-html:active, body:active,
-.docSlider:active,
-.docSlider-inner:active,
-.docSlider-page:active {
-  outline: none;
-}
-
-.docSlider {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.docSlider-inner {
-  width: inherit;
-  height: inherit;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.docSlider-page {
-  height: inherit;
-  width: inherit;
-  overflow: auto;
-  position: absolute;
-  overflow-scrolling: touch;
 }
 
 .placeholder\:text-black::-moz-placeholder {
